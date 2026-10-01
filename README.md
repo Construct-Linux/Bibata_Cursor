@@ -300,6 +300,20 @@ You can also assign multiple sizes to `ctgen` for XCursors build:
 ctgen build.toml -s 16 18 24 32 -p x11 -d 'bitmaps/Bibata-Modern-Ice' -n 'Bibata-Modern-Ice' -c 'Custom white and rounded egde Bibata cursors'
 ```
 
+#### GNOME Shell Scalable Cursors
+
+GNOME Shell 51 draws its cursor from SVGs in `<theme>/cursors_scalable/` and ignores
+XCursors; a theme without that directory gets Adwaita's cursor. `scalable.py` (Python 3.11
+or higher, no other dependencies) writes it from the SVGs, `render.json` colors and
+`configs/*/x.build.toml` hotspots and names, without rendering any PNG:
+
+```bash
+python3 scalable.py                       # Bibata-Modern-Classic and Bibata-Modern-Ice into themes/
+python3 scalable.py -o ~/.local/share/icons Bibata-Modern-Amber
+```
+
+Each theme lands in `<out>/<theme>/cursors_scalable/`, next to the XCursor theme's `cursors/`.
+
 #### Examples
 
 Lets generate Bibata-Modern with green and black colors:
