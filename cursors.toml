@@ -1,12 +1,6 @@
-[theme]
-name = 'Bibata XCursor'
-comment = 'Bibata is open source, compact, and material designed cursor set.'
-website = 'https://www.bibata.live'
-
-[config]
-bitmaps_dir = '' # This config will assigned with `ctgen -d <path>`
-out_dir = '../../themes'
-platforms = 'x11'
+# Bibata's X cursors, from upstream's configs/normal/x.build.toml: which SVG
+# serves which X11 name and aliases, hotspots in the 256px canvas, sizes and
+# frame delay (ms). build.py reads only this table.
 
 [cursors]
 [cursors.fallback_settings]

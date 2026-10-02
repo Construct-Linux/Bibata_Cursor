@@ -12,7 +12,7 @@ writes <icons_dir>/Bibata-Modern-Construct/ with:
                      Shell 51 draws its own cursor from; a theme without them
                      falls back to the shell's built-in Adwaita
 
-Both come from the same SVGs, colours and configs/x.build.toml (hotspots,
+Both come from the same SVGs, colours and cursors.toml (hotspots,
 frame delay, sizes, the X11 names each SVG serves), so they cannot drift.
 
 Needs Python 3.11+ and rsvg-convert (librsvg), nothing else: the Xcursor files
@@ -33,8 +33,8 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-SVG_DIR = ROOT / "svg" / "modern"
-CONFIG = ROOT / "configs" / "normal" / "x.build.toml"
+SVG_DIR = ROOT / "svg"
+CONFIG = ROOT / "cursors.toml"
 
 THEME = "Bibata-Modern-Construct"
 COMMENT = "Bibata Modern in Construct's colours"
