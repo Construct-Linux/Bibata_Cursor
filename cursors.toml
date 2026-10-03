@@ -4,7 +4,9 @@
 
 [cursors]
 [cursors.fallback_settings]
-x11_sizes = [16, 20, 22, 24, 28, 32, 40, 48, 56, 64, 72, 80, 88, 96]
+# GNOME Settings offers cursor sizes 24, 32, 48, 64 and 96, and a client
+# at integer scale 2 or 3 asks for size x scale; 96 was the ceiling already.
+x11_sizes = [24, 32, 48, 64, 72, 96]
 x_hotspot = 128
 y_hotspot = 128
 x11_delay = 40

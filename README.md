@@ -20,8 +20,8 @@ python3 build.py -o ~/.local/share/icons
 writes `Bibata-Modern-Construct/` there:
 
 - `index.theme`
-- `cursors/`: X cursors in 14 sizes (16 to 96) with every alias name Bibata
-  ships, for X11, XWayland and GTK/Qt clients
+- `cursors/`: X cursors in the sizes GNOME uses (24 to 96) with every alias
+  name Bibata ships, for X11, XWayland and GTK/Qt clients
 - `cursors_scalable/`: one SVG directory with `metadata.json` per CSS cursor
   name, for GNOME Shell 51
 
