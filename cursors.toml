@@ -90,7 +90,7 @@ png = 'dnd_no_drop.png'
 x_hotspot = 100
 y_hotspot = 65
 x11_name = 'dnd_no_drop'
-x11_symlinks = ["no-drop"]
+x11_symlinks = ["dnd-no-drop", "no-drop"]
 
 [cursors.dnd-ask]
 png = 'dnd-ask.png'
@@ -148,6 +148,7 @@ x11_name = 'hand2'
 x11_symlinks = [
   "9d800788f1b08800ae810202380a0822",
   "e29285e634086352946a0e7090d73106",
+  "hand",
   "pointer",
   "pointing_hand"
 ]
@@ -168,6 +169,7 @@ x11_symlinks = [
   "00000000000000020006000e7e9ffc3f",
   "08e8e1c95fe2fc01f976f1e063a24ccd",
   "3ecb610c1bf2410f44200f48c40d3599",
+  "half-busy",
   "progress"
 ]
 
