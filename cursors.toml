@@ -5,7 +5,8 @@
 [cursors]
 [cursors.fallback_settings]
 # GNOME Settings offers cursor sizes 24, 32, 48, 64 and 96, and a client
-# at integer scale 2 or 3 asks for size x scale; 96 was the ceiling already.
+# at integer scale 2 or 3 asks for size x scale; libXcursor serves any
+# other request, larger ones included, from the nearest of these.
 x11_sizes = [24, 32, 48, 64, 72, 96]
 x_hotspot = 128
 y_hotspot = 128
