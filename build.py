@@ -297,7 +297,7 @@ def main():
     theme = args.out / THEME
     theme.mkdir(parents=True, exist_ok=True)
     (theme / "index.theme").write_text(
-        f"[Icon Theme]\nName={THEME}\nComment={COMMENT}\nInherits=hicolor\n")
+        f"[Icon Theme]\nName={THEME}\nComment={COMMENT}\n")
     build_cursors(cursors, theme / "cursors", args.jobs)
     build_scalable(cursors, theme / "cursors_scalable")
 
