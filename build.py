@@ -39,12 +39,14 @@ CONFIG = ROOT / "cursors.toml"
 THEME = "Bibata-Modern-Construct"
 COMMENT = "Bibata Modern in Construct's colours"
 
-# Bibata's SVGs are drawn in placeholder colours that each theme replaces.
-# The values are the brand's palette.toml [cursor] (fill, outline, watch).
+# Bibata's SVGs are drawn in placeholder colours that each theme replaces, with the brand's
+# palette.toml [cursor] colours: construct-palette.json is brand's palette.json at brand.ref's
+# commit, written by os's task fork:brand, which fork:check holds to the image's brand.
+PALETTE = json.loads((ROOT / "construct-palette.json").read_text())
 COLORS = {
-    "#00FF00": "#0B1116",  # fill
-    "#0000FF": "#FFFFFF",  # outline
-    "#FF0000": "#00E5FF",  # watch, the accent of the busy cursors
+    "#00FF00": PALETTE["cursor-fill"],
+    "#0000FF": PALETTE["cursor-outline"],
+    "#FF0000": PALETTE["cursor-watch"],  # the accent of the busy cursors
 }
 
 # The SVGs are drawn on a 256px canvas, which is scaled whole to each cursor

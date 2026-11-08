@@ -26,7 +26,10 @@ writes `Bibata-Modern-Construct/` there:
   name, for GNOME Shell 51
 
 `svg/` holds the sources, drawn in placeholder colours (`#00FF00` fill,
-`#0000FF` outline, `#FF0000` watch) that `COLORS` in `build.py` replaces.
+`#0000FF` outline, `#FF0000` watch) that `COLORS` in `build.py` replaces with the palette's
+cursor colours, read from `construct-palette.json`: brand's `palette.json` at the commit the
+image pins (`brand.ref`), written by os's `task fork:brand -- bibata-cursor-theme` and held to it
+by `task fork:check`.
 `cursors.toml` says which SVG serves which X11 names, with hotspots, sizes and
 frame delay.
 
